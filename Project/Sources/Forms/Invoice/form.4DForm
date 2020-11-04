@@ -1,0 +1,153 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"invoices_lb": {
+					"type": "listbox",
+					"left": 10,
+					"top": 25,
+					"width": 336,
+					"height": 410,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.invoices",
+					"currentItemSource": "Form:C1466.invoice",
+					"selectionMode": "single",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"sizingY": "grow",
+					"focusable": true,
+					"alternateFill": "#95F5FF",
+					"method": "ObjectMethods/invoices_lb.4dm",
+					"columns": [
+						{
+							"header": {
+								"text": "ID",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"dataSource": "This:C1470.ID",
+							"width": 55,
+							"footer": {
+								"name": "Footer1"
+							},
+							"textAlign": "left",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Country"
+							},
+							"name": "Column3",
+							"dataSource": "This:C1470.country",
+							"footer": {
+								"name": "Footer3"
+							},
+							"textAlign": "center",
+							"width": 96,
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Total"
+							},
+							"name": "Column2",
+							"dataSource": "This:C1470.total",
+							"dataSourceTypeHint": "number",
+							"width": 166,
+							"footer": {
+								"name": "Footer2"
+							},
+							"enterable": false
+						}
+					]
+				},
+				"Input": {
+					"type": "input",
+					"left": 366,
+					"top": 69,
+					"width": 236,
+					"height": 17,
+					"dataSource": "Form:C1466.invoice.total",
+					"dataSourceTypeHint": "number"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 366,
+					"top": 32,
+					"width": 236,
+					"height": 17,
+					"dataSource": "Form:C1466.total",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Save",
+					"top": 133,
+					"left": 510,
+					"width": 80,
+					"height": 13,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 366,
+					"top": 96,
+					"width": 236,
+					"height": 17,
+					"dataSource": "Form:C1466.invoice.country"
+				}
+			}
+		}
+	],
+	"geometryStamp": 26,
+	"method": "method.4dm"
+}

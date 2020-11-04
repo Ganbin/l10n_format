@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="" uuid="F3490FB9A12F41EAB0176E40583A3EC4" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Invoice" uuid="B472C4E8AD554AC881F31D24A00810E3" id="1">
+		<field name="ID" uuid="5D0F6338825747FFB403358DCFED2C7B" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="total" uuid="0E348BA7FB9E474E9C0BCD41E58598B8" type="6" never_null="true" id="2"/>
+		<field name="country" uuid="861DD27F9AF148A8B9B71B31F94E2EB8" type="10" limiting_length="255" never_null="true" id="3"/>
+		<primary_key field_name="ID" field_uuid="5D0F6338825747FFB403358DCFED2C7B"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="40" top="40" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="FBD14942B4C84A46B7B450CC6BD162DE" type="7">
+		<field_ref uuid="5D0F6338825747FFB403358DCFED2C7B" name="ID">
+			<table_ref uuid="B472C4E8AD554AC881F31D24A00810E3" name="Invoice"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:63.1.0" __keywordBuildingHash="icu:63.1.0">
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>
